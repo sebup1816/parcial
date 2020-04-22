@@ -1,0 +1,56 @@
+#tweet {
+    margin: 0% 30%;
+    padding: 1% 10%;
+    border-style: groove;
+    border-color: #F7F7F7;
+    background-color: white;
+}
+#content{
+    margin: 20;
+    border-radius: 25px;
+    border-style: groove;
+}
+
+#button{
+    color: white;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    background-color: #4CBAF4;
+    margin-top: 2%;
+}
+
+
+#entradas{
+    margin-bottom: 50px;
+}
+.text{
+    margin-bottom: 20px;
+    display: list-item block;
+}
+
+#image img{
+    float: left;
+    width: 25%;
+    height: 25%;
+    margin-top: 4%;
+}
+
+#content {
+    margin-top: 5%;
+    display: inline-block;
+}
+
+.section h3,h4 {
+    display: inline;
+}
+
+.section *{
+    margin: 0%;
+}
+
+#interactions{
+    margin-right: 10px;
+    display: inline-block;
+}
+

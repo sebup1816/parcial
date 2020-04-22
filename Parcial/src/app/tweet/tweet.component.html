@@ -1,0 +1,42 @@
+<!-- Write your comments here <br>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<header>
+    <button routerLink='login'> LOGIN </button>
+</header>
+<div id="tweet">
+    <div id="entradas">
+        <div class="text">
+            <span>¿Qué está pasando?</span>
+            <br>
+            <input type="text" [(ngModel)]="myTweet.texto">
+        </div>
+        <div class="author">
+            <span>Autor</span>
+            <br>
+            <input type="text" [(ngModel)]="myTweet.autor">
+        </div>
+        <button id="button" (click)='addTweet()' >Tweet</button>
+    </div>
+    <div id="content" *ngFor="let tweet of Tweets">
+        <div id="image">
+            <img src="https://cdn3.iconfinder.com/data/icons/popular-social-media-2/48/jee01-16-512.png" alt="Logo JS">
+        </div>
+        <div class="section" style="float: center;">
+            <h4>{{ tweet.texto }}</h4>
+            <br>
+            <h4>Autor: {{ tweet.autor }}</h4>
+            <br>
+            <h4>{{tweet.date}}</h4>
+            <br>
+        <div class="interactions">
+            <i class="glyphicon glyphicon-heart"> {{tweet.likes}}</i>
+            <br>
+            <i class="glyphicon glyphicon-comment"> {{tweet.comments}}</i>
+        </div>
+        
+        </div>
+        <hr>
+    </div>
+</div>-->

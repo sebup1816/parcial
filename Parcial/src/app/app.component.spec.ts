@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Parcial'`, () => {
+  it(`should have as title 'Twitter'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Parcial');
+    expect(app.title).toEqual('Twitter');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('Parcial app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('Twitter app is running!');
   });
 });
