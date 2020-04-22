@@ -11,11 +11,11 @@ import { BackService} from '../services/back.service';
 export class TweetComponent{
 
 
-  myTweets; 
+  myTweet; 
   Tweets = [];
   count = -1;
   
-  /*constructor() {
+  constructor() {
     this.myTweet = {
       id: -1,
       texto: '',
@@ -25,22 +25,22 @@ export class TweetComponent{
       comments: 0
     }
     this.count = 0;
-  }*/
+  }
 
-  constructor(private postsService: BackService){
+  /*constructor(private postsService: BackService){
     this.getTweets;
   }
   
   getTweets(){
     //this.myTweets=this.postsService.getAllTweets;
-  }
+  }*/
 
-  /*addTweet() {
+  addTweet() {
     this.myTweet.date=new Date();
     this.myTweet.likes=Math.floor(Math.random() * (100 - 10 + 1)) + 0;
     this.myTweet.comments=Math.floor(Math.random() * (100 - 10 + 1)) + 0;
     this.myTweet.id = this.count++;
     this.Tweets.push(this.myTweet);
     this.myTweet = new Tweet();
-  }*/
+  }
 }

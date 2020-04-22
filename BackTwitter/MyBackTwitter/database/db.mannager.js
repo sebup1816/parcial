@@ -20,12 +20,6 @@ Post.belongsTo(User, { foreignKey: 'idUser', sourceKey: 'idPost' });
 User.hasMany(Message, { foreignKey: 'idMessage', sourceKey: 'idUser' });
 Message.belongsTo(User, { foreignKey: 'idUser', sourceKey: 'idMessage' });
 
-Post.belongsTo(User, { foreignKey: 'UserIdUser', sourceKey: 'idPost' });
-
-
-User.hasMany(Message,{foreignKey: 'idMessage', sourceKey: 'idUser'});
-Message.belongsTo(User, { foreignKey: 'idUser', sourceKey: 'idMessage' });
-
 //GROUP MODELS
 const models = {
   User: User,
