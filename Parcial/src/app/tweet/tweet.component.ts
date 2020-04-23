@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Tweet } from '../models/tweet.model';
-import { BackService} from '../services/back.service';
+import { TweetServiceService} from '../services/tweet-service.service';
+
 
 
 @Component({
@@ -10,21 +11,27 @@ import { BackService} from '../services/back.service';
 })
 export class TweetComponent{
 
-
-  myTweet; 
-  Tweets = [];
-  count = -1;
   
-  constructor() {
-    this.myTweet = {
-      id: -1,
-      texto: '',
-      autor: '',
-      date: new Date(),
-      likes: 0,
-      comments: 0
-    }
-    this.count = 0;
+  Tweets;
+  textInput: String='';
+  autorInput: String='';
+  
+  
+  constructor(private tweetService: TweetServiceService){
+    this.getData();
+  }
+
+  getData(){
+    this.tweetService.getAllTweets().subscribe(
+       TweetsObs => {
+        this.Tweets=TweetsObs;
+      }
+    );
+    //this.Tweets=this.tweetService.getAllTweets();
+  }
+
+  addTweet(textInput,autorInput){
+    this.tweetService.addTweet(textInput,autorInput);
   }
 
   /*constructor(private postsService: BackService){
@@ -35,12 +42,4 @@ export class TweetComponent{
     //this.myTweets=this.postsService.getAllTweets;
   }*/
 
-  addTweet() {
-    this.myTweet.date=new Date();
-    this.myTweet.likes=Math.floor(Math.random() * (100 - 10 + 1)) + 0;
-    this.myTweet.comments=Math.floor(Math.random() * (100 - 10 + 1)) + 0;
-    this.myTweet.id = this.count++;
-    this.Tweets.push(this.myTweet);
-    this.myTweet = new Tweet();
-  }
 }

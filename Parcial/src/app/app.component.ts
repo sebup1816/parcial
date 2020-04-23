@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { BackService} from './services/back.service';
+import { SwapiFilmsService } from './services/swapi-films.service';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,16 +10,15 @@ import { BackService} from './services/back.service';
 export class AppComponent {
 
   filmsList;
-    constructor(private filmsServie: BackService){
-      console.log("CONSTRUCTOR");
-      this.getFilmsData;
-    }
-
-    getFilmsData(){
-      console.log("GET FILMS DATA");
-      this.filmsServie.getAllFilms;
-    }
-
     
+  constructor(private filmsService: SwapiFilmsService){
+    console.log("CONSTRUCTOR")
+    this.getFilmsData;
+  }
+   
+  getFilmsData(){
+    console.log("GET DATA")
+    this.filmsList= this.filmsService.getAllFilms();
+  }
 
 }

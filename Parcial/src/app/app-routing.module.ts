@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {TweetComponent} from './tweet/tweet.component';
 const routes: Routes = [
-  {path:'login', component:LoginComponent},
-  {path:'', component: TweetComponent}
+  {path:'', component:LoginComponent},
+  {path:'TweetComponent', component: TweetComponent}
 ];
 
 
