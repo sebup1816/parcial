@@ -10,12 +10,15 @@ import { LoginComponent } from './login/login.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { SwapiFilmsService } from './services/swapi-films.service';
+import { RegisterComponent } from './register/register.component';
+import { BackService } from './services/back.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     TweetComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import { SwapiFilmsService } from './services/swapi-films.service';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [SwapiFilmsService],
+  providers: [SwapiFilmsService,BackService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

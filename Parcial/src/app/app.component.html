@@ -4,5 +4,9 @@
 </div>
 <br>
 <br>
+{{users}}
+<div *ngFor='let tweet of users'>
+  <h1>{{tweet.username}}</h1>
+</div>
 
 <router-outlet></router-outlet>

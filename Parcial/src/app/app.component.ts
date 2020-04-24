@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { SwapiFilmsService } from './services/swapi-films.service';
+import {BackService} from './services/back.service';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -9,16 +11,26 @@ import { SwapiFilmsService } from './services/swapi-films.service';
 })
 export class AppComponent {
 
-  filmsList;
-    
-  constructor(private filmsService: SwapiFilmsService){
+  
+  users: [];
+
+  constructor(private backService: BackService){
     console.log("CONSTRUCTOR")
-    this.getFilmsData;
+    this.users=[];
+    this.getUsers();
   }
-   
-  getFilmsData(){
-    console.log("GET DATA")
-    this.filmsList= this.filmsService.getAllFilms();
+  
+  getUsers(){
+    console.log('get users');
+    this.backService.getAllUsers().subscribe(
+      (data) =>{
+        console.log("data:",data);
+        this.users=data['data'];
+      }
+    );
+    console.log("users:",this.users);
   }
+
+
 
 }
