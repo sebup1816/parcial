@@ -15,7 +15,7 @@ export class UserServiceService {
     {
       idUser:2,
       username:"jifor",
-      password:"gay",
+      password:"ok",
     }
   ]
 
