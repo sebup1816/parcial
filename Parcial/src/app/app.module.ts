@@ -13,12 +13,13 @@ import { SwapiFilmsService } from './services/swapi-films.service';
 import { RegisterComponent } from './register/register.component';
 import { BackService } from './services/back.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     TweetComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

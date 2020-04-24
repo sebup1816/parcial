@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Tweet } from '../models/tweet.model';
 import { TweetServiceService} from '../services/tweet-service.service';
+import { UserServiceService } from '../services/user-service.service';
 
 
 
@@ -15,9 +16,9 @@ export class TweetComponent{
   Tweets;
   textInput: String='';
   autorInput: String='';
+  userDelete: String='';
   
-  
-  constructor(private tweetService: TweetServiceService){
+  constructor(private tweetService: TweetServiceService, private userService: UserServiceService){
     this.getData();
   }
 
@@ -33,6 +34,14 @@ export class TweetComponent{
   addTweet(textInput,autorInput){
     this.tweetService.addTweet(textInput,autorInput);
   }
+
+  delete(userDelete){
+    this.userService.deleteAccount(userDelete);
+    console.log(this.userService.ALL_USERS);
+  }
+
+  
+
 
   /*constructor(private postsService: BackService){
     this.getTweets;
