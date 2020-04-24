@@ -2,23 +2,21 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<header>
-    <button routerLink='login'> LOGIN </button>
-</header>
 <div id="tweet">
     <div id="entradas">
         <div class="text">
             <span>¿Qué está pasando?</span>
             <br>
-            <input type="text" [(ngModel)]="myTweet.texto">
+            <input type="text" name="textInput" [(ngModel)]="textInput">
         </div>
         <div class="author">
             <span>Autor</span>
             <br>
-            <input type="text" [(ngModel)]="myTweet.autor">
+            <input type="text" name="autorInput"[(ngModel)]="autorInput">
         </div>
-        <button id="button" (click)='addTweet()' >Tweet</button>
+        <button id="button" (click)='addTweet(textInput,autorInput)' >Tweet</button>
     </div>
+    <br>
     <div id="content" *ngFor="let tweet of Tweets">
         <div id="image">
             <img src="https://cdn3.iconfinder.com/data/icons/popular-social-media-2/48/jee01-16-512.png" alt="Logo JS">

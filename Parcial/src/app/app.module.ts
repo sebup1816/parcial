@@ -7,8 +7,9 @@ import { AppComponent } from './app.component';
 import { TweetComponent } from './tweet/tweet.component';
 import { LoginComponent } from './login/login.component';
 
-import { BackService } from './services/back.service';
+
 import { HttpClientModule } from '@angular/common/http';
+import { SwapiFilmsService } from './services/swapi-films.service';
 
 @NgModule({
   declarations: [
@@ -20,9 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [BackService],
+  providers: [SwapiFilmsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
