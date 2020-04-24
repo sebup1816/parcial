@@ -6,7 +6,7 @@ import { User } from '../models/user.model';
 })
 export class UserServiceService {
 
-  ALL_USERS: User[]=[
+  ALL_USERSDB: User[]=[
     {
       idUser:1,
       username:"seb",
@@ -19,16 +19,28 @@ export class UserServiceService {
     }
   ]
 
-  
+  ALL_USERS=this.ALL_USERSDB;
+
   constructor() { }
+
   getAllUsers(){
     return this.ALL_USERS;
   }
 
-  findUser(username,password){
-    if(username=="seb" && password=="123"){
-      return true;
-    }
+  addUser(username,password){
+    let id=Math.floor(Math.random() * (100 - 10 + 1)) + 0;
+    this.ALL_USERS.push({
+      idUser:id,
+      username:username,
+      password:password,
+    });
   }
 
+  deleteAccount(username){
+    for (let i = 0; i < this.ALL_USERS.length; i++) {
+      if(username == this.ALL_USERS[i].username){
+        delete this.ALL_USERS[i];
+      }    
+    }
+  }
 }

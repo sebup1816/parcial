@@ -8,6 +8,10 @@ const routes: Routes = [
   {path:'', component:LoginComponent},
   {path:'index', component: TweetComponent},
   {path:'register', component:RegisterComponent},
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> bcc6d7ccac56f3f9318ce353fd8afaeb98bdfcd6
 ];
 
 
