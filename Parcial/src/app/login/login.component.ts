@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UserServiceService} from '../services/user-service.service';
-<<<<<<< HEAD
-import {BackService} from '../services/back.service';
-=======
 import { Router } from '@angular/router'
 
->>>>>>> a67906c6168f48450b0396fa09dc4e24fad6afea
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,9 +13,6 @@ export class LoginComponent implements OnInit {
 
   UsernameInput: String='';
   passwordInput: String='';
-<<<<<<< HEAD
-  
-=======
 
   constructor(private UserService: UserServiceService, private router: Router) { 
     this.getData();
@@ -28,13 +21,12 @@ export class LoginComponent implements OnInit {
   getData(){
     this.Users=this.UserService.getAllUsers ();
   }
->>>>>>> a67906c6168f48450b0396fa09dc4e24fad6afea
 
   verifyUser(UsernameInput,passwordInput){
       let auth = false;
       for (let i = 0; i < this.Users.length; i++) {
         if(UsernameInput == this.Users[i].username && passwordInput == this.Users[i].password){
-          this.router.navigate (['TweetComponent']);
+          this.router.navigate (['index']);
           auth = true;
         }    
       }
@@ -43,12 +35,6 @@ export class LoginComponent implements OnInit {
     
   }
 
-  users;
-
-  constructor(private backService: BackService){
-    //console.log("CONSTRUCTOR")
-    this.getUsers();
-  }
   
   getUsers(){
     //this.users=this.backService.getAllUsers();

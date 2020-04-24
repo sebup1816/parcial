@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Tweet } from '../models/tweet.model';
 import { TweetServiceService} from '../services/tweet-service.service';
+import { Router } from '@angular/router';
 
 
 
@@ -11,14 +11,17 @@ import { TweetServiceService} from '../services/tweet-service.service';
 })
 export class TweetComponent{
 
-  
   Tweets;
   textInput: String='';
   autorInput: String='';
   
   
-  constructor(private tweetService: TweetServiceService){
+  constructor(private tweetService: TweetServiceService, private router: Router){
     this.getData();
+  }
+
+  tweets(){
+    return this.Tweets;
   }
 
   getData(){
@@ -42,4 +45,11 @@ export class TweetComponent{
     //this.myTweets=this.postsService.getAllTweets;
   }*/
 
+  deletTweet(id) {
+    for (let i = 0; i < this.Tweets.length; i++) {
+      if(id == this.Tweets[i].id){
+        this.Tweets.splice (i, 1);
+      }      
+    }
+  }
 }
