@@ -1,20 +1,22 @@
 .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
+    height: 70px;
+    background-color: #1ED5D2;
     color: white;
     font-weight: 600;
   }
 
-  .toolbar h1{
-      margin-left: 45%;
-      color: lawngreen;
+  .toolbar img {
+    margin-left: 40%;
   }
+
+  img{
+    width: 3%;
+    height: 70%;
+  }
+
+  
 
   svg#clouds {
     position: fixed;

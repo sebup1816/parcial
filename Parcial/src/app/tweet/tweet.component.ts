@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TweetServiceService} from '../services/tweet-service.service';
-<<<<<<< HEAD
-import { Router } from '@angular/router';
-=======
 import { UserServiceService } from '../services/user-service.service';
->>>>>>> bcc6d7ccac56f3f9318ce353fd8afaeb98bdfcd6
 
 
 
@@ -20,12 +16,7 @@ export class TweetComponent{
   autorInput: String='';
   userDelete: String='';
   
-<<<<<<< HEAD
-  
-  constructor(private tweetService: TweetServiceService, private router: Router){
-=======
   constructor(private tweetService: TweetServiceService, private userService: UserServiceService){
->>>>>>> bcc6d7ccac56f3f9318ce353fd8afaeb98bdfcd6
     this.getData();
   }
 
